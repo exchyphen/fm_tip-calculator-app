@@ -1,0 +1,59 @@
+/* remove the up and down arrows default to input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+:root {
+  /* colors */
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  --hover-color: hsl(173, 61%, 77%);
+  --error-color: hsl(14, 32%, 57%);
+  --reset-color: hsl(183, 79%, 24%);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;  
+  
+  /* font */
+  font-family: "Space Mono", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+
+
+}
+
+body {
+  min-height: 100vh;
+  min-width: 375px;
+  background: var(--light-grayish-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
